@@ -10,7 +10,7 @@ Route::get('/upi-payment', function (Request $request) {
     $transactionId = uniqid('txn_');
     $orderId = uniqid('ord_');
     
-    $upiUrl = "upi://pay?pa={$upiId}&pn={$payeeName}&tid={$transactionId}&tr={$orderId}&tn=Payment%20for%20order&am={$amount}&cu=INR";
+    $upiUrl = "upi://pay?pa={$upiId}&pn={$payeeName}&tid={$transactionId}&tr={$orderId}&tn=Payment%20for%20order&am={$amount}&cu=INR&mc=39441551";
 
     return redirect()->away($upiUrl);
 
